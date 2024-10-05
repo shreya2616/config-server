@@ -30,10 +30,10 @@ pipeline {
 		{
 			steps
 			{
-			    bat "docker rm -f auth-container"
-			    bat "docker rmi -f auth-image"
-			    bat "docker build -t auth-image ."
-			    bat "docker run -p 8090:8090 -d --name auth-container auth-image"
+			    bat "docker rm -f config-container"
+			    bat "docker rmi -f config-image"
+			    bat "docker build -t config-image ."
+			    bat "docker run -p 8088:8088 -d --name config-container config-image"
 			}
 		}
 	}
